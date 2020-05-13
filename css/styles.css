@@ -9,10 +9,39 @@ body {
     background-size: auto 10ovh;
     font-family: Arial;
     height: 100vh;
+    font-size: 12px;
+}
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
-    background-color: #fffff3; 
+    background-color: #fffff3;
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .menu li {
@@ -22,6 +51,11 @@ body {
 .menu ul {
     display: flex;
     justify-content: space-around;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 10px;
 }
 
 a {
@@ -39,6 +73,15 @@ a:hover {
     text-align: center;
 }
 
+.site-title {
+    font-size: 4em;
+}
+
 .site-subtitle {
     font-style: italic;
+}
+
+.img-portfolio {
+    width: 180px;
+    height: 180px;
 }
