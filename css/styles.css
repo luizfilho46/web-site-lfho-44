@@ -5,9 +5,10 @@
 }
 
 body {
-    background-image: url('../img/background.jpg');
-    background-size: auto 10ovh;
-    font-family: Arial;
+    /* background-image: url('../img/background.jpg'); */
+    background-color: whitesmoke;
+    background-size: auto 100vh;
+    font-family: 'Indie Flower', cursive;
     height: 100vh;
     font-size: 12px;
 }
@@ -32,7 +33,7 @@ body {
 
 header {
     display: flex;
-    height: 50vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -42,6 +43,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .menu li {
@@ -69,7 +71,7 @@ a:hover {
 
 .site-subtitle,
 .site-title {
-    color: whitesmoke;
+    /* color: whitesmoke;*/
     text-align: center;
 }
 
@@ -78,10 +80,56 @@ a:hover {
 }
 
 .site-subtitle {
-    font-style: italic;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 2.9em;
+}
+
+.portfolio {
+    height: 100vh;
+    padding: 2em;
+}
+
+.portfolio h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    /* color: whitesmoke; */
+    margin-bottom: 2em;
+    font-size: 2em;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(2, 240px);
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 8em - 48px);
+        background-color: pink;
+    }
+}
+.portfolio figure {
+    text-align: center;
 }
 
 .img-portfolio {
     width: 180px;
-    height: 180px;
+    height: 240px;
+    object-fit: cover;
+    object-position: right bottom;
+}
+
+@media (min-width: 1200px) {
+    .img-portfolio {
+        width: 180px;
+        height: 240px;
+    }
 }
