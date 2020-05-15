@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* background-image: url('../img/background.jpg'); */
     background-color: whitesmoke;
@@ -44,6 +48,7 @@ header {
     width: 100vw;
     top: 0;
     font-family: 'Maven Pro', sans-serif;
+    z-index: 1;
 }
 
 .menu li {
@@ -58,15 +63,56 @@ header {
 .menu a {
     display: inline-block;
     padding: 10px;
+    /* transition: background-color 2s, color 2s; ou */
+    /* transition: background-color, color, 2s; ou */
+    transition: 0.5s;
 }
+
+.menu a:active,
+.menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
+}
+
 
 a {
     color: teal;
     text-decoration: none;
-}
+}dd
 
 a:hover {
     text-decoration: underline;
+}
+
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    /*transition: all 2s;*/
+    /* animation: linear 2s animacaoTitulo forwards; */
+    animation: 1s ease 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    /*0%{
+        o valor inical é o que já está no título
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }*/
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.titulo:hover {
+    transform: scale(0) translateY(0);
+    opacity: 0;
 }
 
 .site-subtitle,
@@ -84,11 +130,13 @@ a:hover {
     line-height: 2.9em;
 }
 
+.contato,
 .portfolio {
-    height: 100vh;
+    min-height: 100vh;
     padding: 2em;
 }
 
+.contato,
 .portfolio h2 {
     font-family: 'Balsamiq Sans', cursive;
     /* color: whitesmoke; */
@@ -125,6 +173,11 @@ a:hover {
     height: 240px;
     object-fit: cover;
     object-position: right bottom;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2) rotate(1deg);
 }
 
 @media (min-width: 1200px) {
@@ -132,4 +185,19 @@ a:hover {
         width: 180px;
         height: 240px;
     }
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    font-size: 5em;
+    transition: text-shadow 2s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, .5);
 }
