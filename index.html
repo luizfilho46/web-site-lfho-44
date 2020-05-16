@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Conhecimento e Experiência </a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -24,20 +24,59 @@
         <div class="titulo">
             <h1 class="site-title">Luiz Filho</h1>
             <h2 class="site-subtitle">Web Developer</h2>
-            <h2 class="site-subtitle">Data Scientist</h2>
+            <h2 class="site-subtitle">Back-end</h2>
         </div>
     </header>
-    <section class="portfolio" id="portfolio">
+    <section class="sobre container">
+        <h2>Sobre</h2>
+        <figure class="avatar"><img src="img/eu-link.jpg" alt="Luiz Filho do Linkedin"></figure>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, deserunt consectetur dolore minima recusandae earum repellendus, iure facere vero possimus ea inventore accusamus, beatae dolores pariatur veritatis voluptate dolorem doloribus!
+        </p>
+        <p>
+            Architecto necessitatibus fugiat inventore sapiente cum velit sed perferendis earum itaque, ex libero tempore eligendi autem, voluptas cupiditate. Ut aliquid voluptas eveniet quis ipsum ullam est dolor ipsam? Maiores, quae.
+        </p>
+        <p>
+            Velit provident odit nisi quibusdam labore quo, veniam, voluptates voluptas minus possimus ad quod culpa modi harum minima magni eveniet enim delectus fugiat sed deserunt tempore similique repudiandae ullam! Deserunt?
+        </p>
+        <p>
+            Velit provident odit nisi quibusdam labore quo, veniam, voluptates voluptas minus possimus ad quod culpa modi harum minima magni eveniet enim delectus fugiat sed deserunt tempore similique repudiandae ullam! Deserunt?
+        </p>
+        <p>
+            Velit provident odit nisi quibusdam labore quo, veniam, voluptates voluptas minus possimus ad quod culpa modi harum minima magni eveniet enim delectus fugiat sed deserunt tempore similique repudiandae ullam! Deserunt?
+        </p>
+        <p>
+            A Alura Caelum está fazendo um grande trabalho para colaborar com o isolamento social. <a href="https://www.alura.com.br/imersao-css" target="_blank">Imersão CSS</a>
+        </p>
+    </section>
+    <section class="portfolio container" id="portfolio">
         <h2>Tech Skills</h2>
         <div class="grid">
-            <figure>
-                <img class="img-portfolio" src="./img/undraw_at_home_octe.svg" alt="Home" />
-                <figcaption>Internet das Coisas - IoT</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./img/undraw_cloud_files_wmo8.svg" alt="Desktop" />
-                <figcaption>Desktop</figcaption>
-            </figure>
+            
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="front">
+                        <img class="img-portfolio" src="./img/undraw_at_home_octe.svg" alt="Home" />
+                        <figcaption>Internet das Coisas - IoT</figcaption>
+                    </figure>
+                    <div class="back">
+                        Javascript Developer 2016
+                    </div>  
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="div card">
+                    <figure class="front">
+                        <img class="img-portfolio" src="./img/undraw_cloud_files_wmo8.svg" alt="Desktop" />
+                        <figcaption>Desktop</figcaption>
+                    </figure>
+                    <div class="back">
+                        Python Developer 2019
+                    </div>
+                </div>
+            </div>
+
             <figure>
                 <img class="img-portfolio" src="./img/undraw_data_processing_yrrv.svg" alt="Web" />
                 <figcaption>Web</figcaption>
@@ -48,7 +87,7 @@
             </figure>
         </div>
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
         <h2>Contato</h2>
         <div class="grid icons">
             <a target="_blank" href="https://github.com/luizfilho46?tab=repositories">
