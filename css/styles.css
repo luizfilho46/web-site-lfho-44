@@ -78,7 +78,7 @@ header {
 a {
     color: teal;
     text-decoration: none;
-}dd
+}
 
 a:hover {
     text-decoration: underline;
@@ -166,7 +166,6 @@ a:hover {
 
 .sobre p {
     color: blue;
-    margin-bottom: ;
     text-indent: 2em;
     text-align: justify;
 }
@@ -200,25 +199,17 @@ a:hover {
 }
 
 .portfolio .grid {
-    display: grid;
-    gap: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
-@media (min-width: 560px) {
-    .portfolio .grid {
-        grid-template-columns: repeat(2, 240px);
+@media (max-width: 440px) {
+   .portfolio .grid {
+        flex-direction: column;
     }
 }
 
-@media (min-width: 880px) {
-    .portfolio .grid {
-        grid-template-columns: repeat(3, 240px);
-        align-content: center;
-        justify-content: center;
-        height: calc(100vh - 8em - 48px);
-        background-color: whitesmoke;
-    }
-}
 .portfolio figure {
     text-align: center;
 }
